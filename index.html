@@ -1,0 +1,385 @@
+<html>
+    <!-- head open-->
+    <head>
+        <title>PBLApp</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Css/left.css">
+    <link rel="stylesheet" href="Css/matirializecss.css">
+        <link rel="stylesheet" type="text/css" href="Css/style.css">
+        <link rel="stylesheet" type="text/css" href="Css/bootstrap.css">
+        <!-- js -->
+        <script src="js/matirializejs.js"></script>
+        <script src="js/ajax.js"></script>
+        <link href="font/font.ttf" rel="stylesheet">
+        <script src="js/bootstrap.js"></script>
+        <script src="Css/sweetalert.js"></script>
+        <!-- js end-->
+    </head>
+    <!--- head close-->
+<style>
+@media screen and (min-width: 1440px){
+.option marquee{
+		font-size:23px;
+	}
+	#rig{
+	height:83vh;
+	}
+	#slide{
+		height:83vh;
+	}
+	 #wipro{
+	    width: 3.79vw;
+ margin-top: -15px;
+        }
+#slide{
+width:19.823vw;}
+}
+@media screen  and (max-width: 1440px){
+		 #wipro{
+	    width: 5.6vw;
+             margin-top: -15px;
+    }
+	#rig{
+	height:80vh;
+	}
+
+#slide{
+		height:76.3vh;
+		width:19.5vw;
+	}
+}
+
+footer p{
+	font-size:20px;
+}
+
+
+#slide::-webkit-scrollbar {
+  width: 10px;
+}
+#slide::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+#slide::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+#slide::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+    <body onload="startTime()" onload="calctime()" onbeforeunload="return myFunction()" >
+        <div class="header">
+            <div class="col-md-1">
+                <a href="http://ksrce.ac.in/" target="_blank"><img src="img/collegeLogo.png" width="70px" title="Click to view ksrce page"></a>
+            </div>
+            <h4 > <c>K.S.R. College of Engineering</c><br> <span> -    PBLApp</span></h4>
+            <div class="float-right">
+                <div class="option">
+                    <marquee behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();"><a href="http://172.16.1.3:8084/PBLApp/codeLite.html" target="_blank" title="Click to view">CodeLite for Virtusa</a></marquee> 
+            </div>
+
+                <h5 id="demo" style="margin-left: 10px;color: white;"></h5>
+                <h5 id="txt" style="margin: 0px 20px 0px 10px;color: white"></h5>  
+                <a href="https://www.wipro.com/" target="_blank"><img id="wipro" src="img/Wipro_logo_logotipo.png" title="Click to view wipro page" ></a>
+    
+            </div>
+        </div>
+ 	 <div class="col-sm-2" id="slide" >
+        <h3 class="waves-effect" data-toggle="collapse" data-target="#app"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Softwares</h3>
+        <m id="app" class="collapse out col-sm-12">
+             <a href="http://172.16.1.3:8084/PBLApp/flowgorithm-2.8.0-setup.zip">Flowchart Tool : Flowgorithm</a><br>
+            <a href="source/03_Soft/jdk-8u191-windows-x64.exe">Java Development Kit 1.8</a><br>
+            <a href="source/03_Soft/eclipse-jee-oxygen-3a-win32.zip" >Eclipse - Oxygen (32 Bit)</a><br>
+            <a href="source/03_Soft/eclipse-jee-oxygen-3a-win32-x86_64.zip">Eclipse - Oxygen (64 Bit)</a><br>
+            <a href="source/03_Soft/sqldeveloper-4.0.3.16.84-x64.zip">SQL Developer 4.0.3</a><br>
+            <a href="source/03_Soft/ojdbc14.jar">Oracle JDBC Driver</a><br>
+            <a href="source/03_Soft/gcc-8.2.0-64.exe">GCC compiler for C/C++</a><br>
+            <a href="source/03_Soft/eclipse_c.zip">Eclipse for C/C++</a>
+        </m>
+        
+        <h3 class="waves-effect" class="hover" data-toggle="collapse" data-target="#ref"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Reference</h3>
+        <m id="ref" class="collapse out col-sm-12"><a href="source/02_Reference/021_tutorial/index.html" target="iframe">Java Tutorial - Oralce (Offline)</a><br>
+            <a href="source/02_Reference/022_Java The Complete Reference Ninth Edition.pdf" target="iframe">The Complete Reference Book</a><br>
+            <a href="source/02_Reference/JavaTpoint/java1/www.javatpoint.com/java-tutorial.html" target="iframe">JavaTpoint.com (Offline)</a>
+        </m>
+        
+        <h3 class="waves-effect" data-toggle="collapse" data-target="#log"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Logic Building</h3>
+        <m id="log" class="collapse out col-sm-12">
+            <a href="source/01_LogicBuilding/011_ProblemSolvingByComputer.pdf" target="iframe">Problem Solving By Computer</a><br>
+            <a href="source/01_LogicBuilding/012_An_Approach_To_Logic_Buidling_v1.pdf" target="iframe">An Approach to Logic Building</a><br>
+            <a href="source/01_LogicBuilding/013_LC1 - Number Based Problems.pdf" target="iframe">LC-1 | Number based Problems</a><br>
+            <a href="source/01_LogicBuilding/014_LC2 - Loop Based Problems.pdf" target="iframe">LC-2 | Loop based problems</a><br>
+            <a href="source/01_LogicBuilding/015_LC3 - Array Based Problems.pdf" target="iframe">LC-3 | Array based problems</a><br>
+            <a href="source/01_LogicBuilding/016_LC4 - String Based Problems.pdf" target="iframe">LC-4 | String based problems</a><br>
+            <a href="source/01_LogicBuilding/017_LC5 - Sorting and Searching Based Problems.pdf" target="iframe">LC-5 | Sorting and Searching based problems</a>
+        </m>
+
+        <h3 class="waves-effect" data-toggle="collapse" data-target="#project"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;">Projects</h3>
+        <m id="project" class="collapse out col-sm-12">
+            <a href="source/04_Projects/0410_EBG.pdf" target="iframe">Electricity Bill Generation</a><br>
+            <a href="source/04_Projects/0411_Interest.pdf" target="iframe">Interest Calculation</a><br>
+            <a href="source/04_Projects/0420_Banking.pdf" target="iframe">Banking With Database</a><br>
+        </m>        
+        <br>
+          <h3 class="waves-effect" data-toggle="collapse" data-target=></h3>
+        <h2 style="padding: 10px;background-color: #64e764;">Milestone - 1</h2>
+        <div class="mi1">
+            <h3 class="waves-effect" data-toggle="collapse"  data-target="#java"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Java Fundamentals</h3>
+            <m id="java" class="collapse out col-sm-12" >
+                <a href="source/11_JavaFundamentals/111_JavaArchitecture.pdf"  target="iframe" >Java Architecture</a><br>
+                <a href="source/11_JavaFundamentals/1120_LanguageBassics.pdf"  target="iframe" >Language Basics</a><br>
+                <a href="source/11_JavaFundamentals/1121_LanguageBasicsAssignments.pdf"  target="iframe" >Language Basics Assignments</a><br>        
+                <a href="source/11_JavaFundamentals/1130_FlowControlStatements.pdf"  target="iframe" >Flow Control Statements</a><br>
+                <a href="source/11_JavaFundamentals/1131_FlowControlAssignments.pdf"  target="iframe" >Flow Control Assignments</a><br>
+                <a href="source/11_JavaFundamentals/1140_Arrays.pdf" target="iframe" >Arrays</a><br>
+                <a href="source/11_JavaFundamentals/1141_ArrayAssignments.pdf" target="iframe" >Arrays Assignments</a><br>
+                <a href="source/11_JavaFundamentals/110_Project_1.pdf" target="iframe" >Project 1</a><br>
+                <a href="source/11_JavaFundamentals/110_Project_2.pdf" target="iframe" >Project 2</a><br>
+            </m>
+            
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#logic"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Logic Building Hour Plan-M1</h3><br>
+            <m id="logic" class="collapse out col-sm-12" >
+                <a href="source/12_LogicBuildingHourPlan-M1/LogicBuildingHour_Plan_Mile1.pdf" target="iframe">Logic Building Hour Plan | Milestone-1</a> <br>
+                <h5 class="waves-effect" data-toggle="collapse" data-target="#1">Day-4 Practice</h5>
+                <m id="1" class="collapse out col-sm-12" >
+                    <a href="https://tests.mettl.com/authenticateKey/2bd025dc" target="iframe">Day-4 | Logic Practice-1 | is Even</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/dbdac2a9" target="iframe">Day-4 | Logic Practice-2 | is Odd</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/454f012b" target="iframe">Day-4 | Logic Practice-3 | Return last digit of the given number</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/9f87004e" target="iframe">Day-4 | Logic Practice-4 | Return Second Last digit of the given number</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/783a1fcf" target="iframe">Day-4 | Logic Practice-5 | Sum of last digits of the given two number</a>
+                </m>
+                <h5 class="waves-effect" data-toggle="collapse" data-target="#5"> Day-5 Practice</h5>
+                <m id="5" class="collapse out col-sm-12" >
+                    <a href="https://tests.mettl.com/authenticateKey/36c4ef58" target="iframe">Day-5 | Logic Practice-1 | Is N an exact multiple of M?</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/8edbe922" target="iframe">Day-5 | Logic Practice-2 | Of given 5 numbers, how many are even?</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/67147bd5" target="iframe">Day-5 | Logic Practice-3 | Of given 5 numbers, how many are odd? </a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/607636d7" target="iframe">Day-5 | Logic Practice-4 | Of 5 numbers, how many are even or odd? </a>
+                </m>
+                <h5 class="waves-effect" data-toggle="collapse" data-target="#6"><i class="fa fa-angle-right"></i> Day-6 Practice</h5>
+                <m id="6" class="collapse out col-sm-12" >
+                    <a href="https://tests.mettl.com/authenticateKey/b1efaa3d" target="iframe">Day-6 | Logic Practice-1 | Is Prime?</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/8c1f2ae" target="iframe">Day-6 | Logic Practice-2 | Factorial of a number</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/f390cadf" target="iframe">Day-6 | Logic Practice-3 | Nth Fibonacci</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/34fdaa41" target="iframe">Day-6 | Logic Practice-4 | Nth Prime</a>
+                </m>
+                <h5 class="waves-effect" data-toggle="collapse" data-target="#7"><i class="fa fa-angle-right"></i> Day-7 Practice</h5>
+                <m id="7" class="collapse out col-sm-12" >
+                    <a href="https://tests.mettl.com/authenticateKey/87c41143" target="iframe">Day-7 | Logic Practice-1 | Number of Primes in a specified range</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/ed6b4da" target="iframe">Day-7 | Logic Practice-2 | All Digits Count</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/b7aac4a5" target="iframe">Day-7 | Logic Practice-3 | Unique Digits Count</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/e46500f5" target="iframe">Day-7 | Logic Practice-4 | Non-Repeated Digits’ Count</a>
+                </m>                
+                <h5 class="waves-effect" data-toggle="collapse" data-target="#8"><i class="fa fa-angle-right"></i> Day-8 Practice</h5>
+                <m id="8" class="collapse out col-sm-12" >
+                    <a href="https://tests.mettl.com/authenticateKey/ab1d60cc" target="iframe">Day-8 | Logic Practice-1 | digitSum : sum of all digits in N</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/b55d1714" target="iframe">Day-8 | Logic Practice-2 | digitSum even: sum of even digits in N</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/738fdee0" target="iframe">Day-8 | Logic Practice-3 | digitSum odd: sum of odd digits in N</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/a05abbcf" target="iframe">Day-8 | Logic Practice-4 | digitSum opt: sum of even or odd digits</a>
+                </m>
+                <h5 class="waves-effect" data-toggle="collapse" data-target="#9"><i class="fa fa-angle-right"></i> Day-9 Practice</h5>
+                <m id="9" class="collapse out col-sm-12" >
+                    <a href="https://tests.mettl.com/authenticateKey/28c41d9d" target="iframe">Day-9 | Logic Practice-1 | Is Palindrome Number?</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/f4fdb02" target="iframe">Day-9 | Logic Practice-2 | Is Palindrome Possible?</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/be582d9f" target="iframe">Day-9 | Logic Practice-3 | Create PIN using alpha, beta, gamma</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/d612c0e6" target="iframe">Day-9 | Logic Practice-4 | Weight of a hill pattern</a><br>
+                </m>
+                <h5 class="waves-effect" data-toggle="collapse" data-target="#10"><i class="fa fa-angle-right"></i> Day-10 Practice</h5>
+                <m id="10" class="collapse out col-sm-12" >
+                    <a href="https://tests.mettl.com/authenticateKey/4a72723f" target="iframe">Day-10 | Logic Practice-1 | Return second word in Uppercase</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/ffe8042" target="iframe">Day-10 | Logic Practice-2 | is Palindrome (string)</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/387952fc" target="iframe">Day-10 | Logic Practice-3 | weight of string</a><br>
+                    <a href="https://tests.mettl.com/authenticateKey/916310b8" target="iframe">Day-10 | Logic Practice-4 | Most Frequent Digit</a><br>
+                </m>
+            </m>                
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#Oops"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> OOPS / Inheritance</h3>
+            <m id="Oops" class="collapse out col-sm-12" >
+                <a href="source/13_ClassesandObjects/131_TM2_Classes_Objects.pdf" target="iframe">Classes and Objects</a><br>
+                <a href="source/13_ClassesandObjects/132_TM2_Encapsulation_Abstraction.pdf" target="iframe">Encapsulation / Abstraction</a><br>
+                <a href="source/13_ClassesandObjects/133_TM2_Inheritance.pdf" target="iframe">Inheritance</a><br>
+                <a href="source/13_ClassesandObjects/134_TM2_Overriding_Polymorphism.pdf" target="iframe">Overriding / Polymorphism</a><br>
+                <a href="source/13_ClassesandObjects/135_TM2_Garbage_Collection.pdf" target="iframe">Garbage Collection</a><br>
+                <a href="source/13_ClassesandObjects/136_TM2_String_StringBuffer.pdf" target="iframe">String and String Buffer</a><br>
+            </m>
+            <h3 class="waves-effect" id="san" data-toggle="collapse" data-target="#pack"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Abstraction / Packages / Exception Handling</h3>
+            <m id="pack" class="collapse out col-sm-12" >
+                <a href="source/15_AbstractionPackagesExceptionHandling/151_AbstractClasses.pdf" target="iframe">Abstract Classes</a><br>
+                <a href="source/15_AbstractionPackagesExceptionHandling/152_final_keyword.pdf" target="iframe">Final Keyword</a><br>
+                <a href="source/15_AbstractionPackagesExceptionHandling/153_Introduction_toPackages.pdf" target="iframe">Introduction to Packages</a><br>
+                <a href="source/15_AbstractionPackagesExceptionHandling/154_Interfaces.pdf" target="iframe">Interfaces</a><br>
+                <a href="source/15_AbstractionPackagesExceptionHandling/155_Introduction_ExceptionHandling.pdf" target="iframe">Introduction to Exception Handling</a>
+            </m>
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#warpper"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Wrapper Classes</h3>
+            <m id="warpper" class="collapse out col-sm-12" >
+                <a href="source/16_WrapperClasses/161_Wrapper_Classes.pdf" target="iframe">Wrapper Classes</a><br>
+            </m>
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#junit"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Junit</h3>
+            <div class="last" >
+                <m id="junit" class="collapse out col-sm-12" >
+                    <a href="source/17_Junit/170_junit4jars.zip">Libraries for Junit</a><br>
+                    <a href="source/17_Junit/171_1 JUNIT - Introduction.pdf" target="iframe">Introduction to Junit</a><br>
+                    <a href="source/17_Junit/172_2 JUNIT - Junit with Eclipse.pdf" target="iframe">Junit with Eclipse</a><br>
+                    <a href="source/17_Junit/173_3 JUNIT - Assert  methods and Annotation.pdf" target="iframe">Assert methods and annotations</a><br>
+                    <a href="source/17_Junit/174_5 JUNIT - Test Suite.pdf" target="iframe">Test Suite</a>
+                </m>
+            </div>
+    </div>
+        
+        <h2 style="padding: 10px;background-color: #ff7070;">Milestone - 2</h2>
+        <div class="below">
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#lo2"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Logic Building Hour Plan-M1</h3>
+            <m id="lo2" class="collapse out col-sm-12" >
+                <a href="source/21_LogicBuildingHourPlan-M2/210_LogicBuildingHour_Plan_Mile2.pdf" target="iframe">Logic Building Hour Plan | Milestone-2</a><br>
+            </m>            
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#code"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Coding Standards</h3>
+            <m id="code" class="collapse out col-sm-12" >
+                <a href="source/22_CodingStandards/221_CodingPractices.pdf" target="iframe">Coding Practices</a><br>
+            </m>
+            
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#col"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Collection</h3>
+            <m id="col" class="collapse out col-sm-12" >
+                <a href="source/23_Collection/231_Introduction_to_Collection.pdf" target="iframe">Introduction to Collection</a><br>
+                <a href="source/23_Collection/232_List.pdf" target="iframe">List</a><br>
+                <a href="source/23_Collection/233_Generics.pdf" target="iframe">Generics</a><br>
+                <a href="source/23_Collection/234_Set.pdf" target="iframe">Set</a><br>
+                <a href="source/23_Collection/235_Map.pdf" target="iframe">Map</a><br>
+            </m>
+            
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#i"><i class="fa fa-angle-right"></i><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> I/O Streams</h3>
+            <m id="i" class="collapse out col-sm-12" >
+                <a href="source/24_IoStreams/241_IO_Introduction.pdf" target="iframe">IO Introduction</a><br>
+                <a href="source/24_IoStreams/242_IO Operations.pdf" target="iframe">IO Operations</a><br>
+                <a href="source/24_IoStreams/243_Object Serialization.pdf" target="iframe">Object Serialization</a>
+            </m>
+            
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#mu">
+                <img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> Multithreading I / II
+            </h3>
+            <m id="mu" class="collapse out col-sm-12" >
+                <a href="source/25_Multithreading/251_Introduction to Multithreading.pdf" target="iframe">Introduction to Multithreading</a><br>
+                <a href="source/25_Multithreading/252_Thread Creation.pdf" target="iframe">Thread Creation</a><br>
+                <a href="source/25_Multithreading/253_Thread Control And Priorites.pdf" target="iframe">Thread Control and Priorities</a><br>
+                <a href="source/25_Multithreading/254_Thread Synchronization.pdf" target="iframe">Thread Synchronization</a><br>
+            </m>
+            
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#rdbms">
+                <img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;"> RDBMS / SQL / JDBC
+            </h3>
+            <m id="rdbms" class="collapse out col-sm-12" >
+                <a href="source/26_RdbmsSqlJdbc/2601_Less00_Introduction to RDBMS.pdf" target="iframe">Introduction to RDBMS</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2602_Less01_Oracle_11g_Introduction.pdf" target="iframe">Oracle 11g Introduction</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2603_Less02_Select Statement.pdf" target="iframe">Select Statement</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2604_Less03_Restricting_Sorting Data.pdf" target="iframe">Restricting & Sorting Data</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2605_Less07_DML.pdf" target="iframe">DML Statement</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2606_Less08_DDL.pdf" target="iframe">DDL Statement</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2611_JDBC -1 Introduction.pdf" target="iframe">Introduction to JDBC</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2612_JDBC -2 Establishing Connection.pdf" target="iframe">Establishing Connection</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2613_JDBC-3ExecuteQueryProcessResults.pdf" target="iframe">Executing Query & Processing Result</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2614_JDBC-4 MetaData And PreparedStatement.pdf" target="iframe">Prepared Statement & Meta Data</a><br>
+                <a href="source/26_RdbmsSqlJdbc/2615_JDBC-5 CallableStatement and Transactions.pdf" target="iframe">Callable Statement & Transactions</a><br>
+            </m>
+        </div>
+        
+        <h2 style="padding: 10px;background-color: #ff6d00;">Milestone - 3</h2>
+        <div class="mi3">
+            
+            <h3 class="waves-effect" data-toggle="collapse" data-target="#lo3"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;">Logic Building Hour Plan-M3</h3>
+            <m id="lo3" class="collapse out col-sm-12" >
+                <a href="source/31_LogicBuildingHourPlan-M3/311_LogicBuildingHour_Plan_Mile3_v1.pdf" target="iframe">Logic Building Hour Plan | Milestone-3</a><br>
+            </m>            
+
+            <h3 class="waves-effect" data-toggle="collapse"  data-target="#html"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;">HTML</h3>
+            <m id="html" class="collapse out col-sm-12" >
+                <a href="source/33_HTML/331_IntroductiontoHTMLanditsElements.pdf" target="iframe">Introduction to HTML and its elements</a><br>
+                <a href="source/33_HTML/332_LayoutTagsandSemanticTags.pdf" target="iframe">Layout Tags and Semantic Tags</a><br>
+                <a href="source/33_HTML/333_TablesFormsandFrames.pdf" target="iframe">Tables, Forms and Frames</a><br>                
+                <a href="source/33_HTML/334_StyleandDivTags.pdf" target="iframe">Style and div tags</a><br>
+                <a href="source/33_HTML/335_IntroductionToHTML5.pdf" target="iframe">Introduction to HTML5</a><br>
+            </m>
+
+            <h3 class="waves-effect" data-toggle="collapse"  data-target="#jscss"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;">Javascript / CSS</h3>
+            <m id="jscss" class="collapse out col-sm-12" >
+                <a href="source/34_JavaScriptCSS/3401_IntroductionToCSS.pdf" target="iframe">Introduction to CSS</a><br>
+                <a href="source/34_JavaScriptCSS/3402_StylesAndStyleSheets.pdf" target="iframe">Styles and StyleSheets</a><br>
+                <a href="source/34_JavaScriptCSS/3403_FormattingWithCSS.pdf" target="iframe">Formatting With CSS</a><br>
+                <a href="source/34_JavaScriptCSS/3404_LinksAndLists.pdf" target="iframe">Links and Lists</a><br>
+                <a href="source/34_JavaScriptCSS/3405_CSSBoxModel.pdf" target="iframe">CSS Box Model</a><br>
+                <a href="source/34_JavaScriptCSS/3406_CSS3.pdf" target="iframe">CSS3</a><br>
+                <a href="source/34_JavaScriptCSS/3411_IntroductiontoJavascriptItsBasicsandFunctions.pdf" target="iframe">Introduction to Javascript its Basics and Functions</a><br>
+                <a href="source/34_JavaScriptCSS/3412_JavaScriptObjects.pdf" target="iframe">JavaScript Objects</a><br>
+                <a href="source/34_JavaScriptCSS/3413_JavaScriptValidations.pdf" target="iframe">JavaScript Validations</a><br>
+                <a href="source/34_JavaScriptCSS/3414_JavaScriptRegularExpression.pdf" target="iframe">JavaScript Regular Expression</a><br>
+                <a href="source/34_JavaScriptCSS/3421_IntroductionToBootStrap.pdf" target="iframe">Introduction to BootStrap</a><br>
+                <a href="source/34_JavaScriptCSS/3422_FrontEndFramework.pdf" target="iframe">Front End Framework</a><br>
+                <a href="source/34_JavaScriptCSS/3423_BootstrapGridSystem.pdf" target="iframe">Bootstrap Grid System</a><br>
+            </m>
+
+            <h3 class="waves-effect" data-toggle="collapse"  data-target="#servjsp"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;">Servlet / JSP</h3>
+            <m id="servjsp" class="collapse out col-sm-12" >
+                <a href="source/35_ServletsAndJSP/351_IntroductionToServlets.pdf" target="iframe">Introduction to Servlets</a><br>
+                <a href="source/35_ServletsAndJSP/352_ServletsGetAndPostRequests.pdf" target="iframe">Servlets Get & Post Requests</a><br>
+                <a href="source/35_ServletsAndJSP/353_ServletConfigAndServletContext.pdf" target="iframe">Servlet Config & Context</a><br>
+                <a href="source/35_ServletsAndJSP/354_ServletCookiesAndSessionManagement.pdf" target="iframe">Servlet Cookies & Session Management</a><br>
+                <a href="source/35_ServletsAndJSP/355_IntroductionToJSP.pdf" target="iframe">Introduction to JSP</a><br>
+                <a href="source/35_ServletsAndJSP/356_JavaBeansInJSP.pdf" target="iframe">JavaBeans in JSP</a><br>
+            </m>
+            
+            <h3 class="waves-effect" data-toggle="collapse"  data-target="#xml"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;">XML-I and XML-II</h3>
+            <m id="xml" class="collapse out col-sm-12" >
+                <a href="source/36_XML/361_IntroductionToXML.pdf" target="iframe">Introduction to XML</a><br>
+                <a href="source/36_XML/362_DTD.pdf.pdf" target="iframe">DTD</a><br>
+                <a href="source/36_XML/363_XMLNamespace.pdf.pdf" target="iframe">XML Namespace</a><br>
+                <a href="source/36_XML/364_XMLSchema.pdf.pdf" target="iframe">XML Schema</a><br>
+                <a href="source/36_XML/365_XSLT.pdf.pdf" target="iframe">XSLT</a><br>                
+            </m>            
+            
+            <h3 class="waves-effect" data-toggle="collapse"  data-target="#ajax"><img src="img/hand-point-right.svg" style="width: 19px;margin-bottom: 5px;">AJAX</h3>
+            <m id="ajax" class="collapse out col-sm-12" >
+                <a href="source/37_AJAX/371_IntroductionToAJAX.pdf" target="iframe">Introduction to AJAX</a><br>
+                <a href="source/37_AJAX/372_HowAJAXworks.pdf" target="iframe">How AJAX Works</a><br>
+                <a href="source/37_AJAX/373_AJAXApplication.pdf" target="iframe">AJAX Application</a><br>
+                <a href="source/37_AJAX/374_AJAXDatabaseApplication.pdf" target="iframe">AJAX Database Application</a><br>
+            </m>
+        </div>
+</div>
+       
+            <iframe id="rig" src="right.html" name="iframe" ></iframe> 
+        <footer>
+   
+            <p class=" links text-center " style="color:#333"><span style="text-shadow: 1px 1px 1px red;color: red;font-weight: 500;">Made  By : </span>
+            <a href="https://santhoshkumarvgds.github.io" target="_blank" title="Click to view my profile">V.Santhoshkumarvgds </a> (2017-2021)</p>
+</footer>
+    </body>
+  
+    <script>
+  swal("PBLApp!", "Improve your knowledge", "success")
+  </script>
+    
+    <script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("txt").innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<script >
+    
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+    function myFunction() {
+    return "Write something clever here...";
+}
+
+
+</script>
+</html>

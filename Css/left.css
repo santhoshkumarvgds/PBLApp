@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Times New Roman;
+}
+
+
+#slide a{
+    margin-left: -15px;
+}
+
+
+
+#slide{
+    overflow-x: hidden;
+    padding:0px;
+    margin: 0px;
+    overflow-y: auto;
+}
+
+
+#slide h3{
+    font-size: 18px;
+     padding: 10px 10px 10px 20px;
+}
+
+m{
+    margin-bottom: 10px;
+}
+h4{
+    margin-bottom: 10px;
+}
+#slide m{
+    padding-left:35px;
+    margin-right: 20px;
+}
+/*color for fist&second mil stone*/
+#slide .mi1{
+    background-color: #9efe9e;  
+}
+
+#slide .below{
+    background-color:#ffa4a4;
+}
+
+#slide .mi3{
+    background-color:#f0af00;
+}
+
+#slide .mi1 m,#slide #junit{
+    background-color: #c3fbbb;
+}
+#slide .below m,#slide #mu{
+    background-color: #ffc4c4;
+}
+
+
+
+#slide h2{
+    font-size:18px;
+    margin: 0px;
+    padding: 0px;
+}
+#slide h4{
+    padding: 6px;
+    margin: -8px 0px -0.5px 3px;
+    font-size: 16.5px;
+}
+#slide h5{
+    font-size: 14px;
+    padding-left: -15px;
+}
+#slide h3:hover{
+    padding: 9.9px 10px 10px 14px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.waves-effect {
+    width: 100%;
+       border: none;
+    outline: none;
+    padding: 10px 10px;
+   
+    cursor: pointer;
+    
+}
